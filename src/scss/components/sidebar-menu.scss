@@ -1,0 +1,75 @@
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  z-index: var(--z-index-4);
+  width: 330px;
+  height: 100%;
+  background: var(--neutral-color-50);
+  transform: translateX(-100%);
+  transition: transform var(--transition);
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__top {
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding: 20px 15px;
+  }
+
+  &__submenu {
+    border-bottom: 1px solid var(--neutral-color-30);
+    padding: 10px 0;
+  }
+
+  &__label {
+    margin: 0 0 8px 8px;
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--neutral-color-30);
+  }
+
+  &__link {
+    @include flex-align-center;
+    position: relative;
+    gap: 8px;
+    overflow: hidden;
+    padding: 12px 15px;
+    color: var(--neutral-color-20);
+    transition: all var(--transition);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      display: none;
+      width: 3px;
+      height: 52.08px;
+      background-color: var(--neutral-color-40);
+      transition: all var(--transition);
+    }
+
+    & svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    & path {
+      fill: var(--neutral-color-20);
+      transition: all var(--transition);
+    }
+
+    &:hover {
+      color: var(--neutral-color-40); 
+      background: var(--neutral-color-30);
+
+      &::before {
+        display: block;
+      }
+
+      & svg path {
+        fill: var(--neutral-color-40);
+      }
+    }
+  }
+}
