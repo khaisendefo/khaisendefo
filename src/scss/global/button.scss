@@ -1,5 +1,11 @@
 .green-button { 
-  font-weight: 500;
+  border: 2px solid var(--neutral-color-40);
   color: var(--neutral-color-10);
   background-color: var(--neutral-color-40);
+  transition: all var(--transition);
+
+  &:hover {
+    color: var(--neutral-color-40);
+    background-color: transparent; 
+  }
 }

@@ -1,12 +1,26 @@
 .header {
   &__fixed {
     border-bottom: 1px solid var(--neutral-color-30);
-    padding: 20px 0;
+    padding: 22px 0;
+
+    @include breakpoint-tablet {
+      padding: 15px 0;
+    }
   }
 
   &__inner {
     @include flex-all-between;
     gap: 30px;
+
+    @include breakpoint-1200 {
+      gap: 15px;
+    }
+  }
+
+  &__logo {
+    @include breakpoint-1200 {
+      order: 2;
+    }
   }
 
   &__nav {
@@ -15,6 +29,14 @@
     border-left: 1px solid var(--neutral-color-30);
     padding: 10px 30px;
     width: 100%;
+
+    @include breakpoint-1200 {
+      display: none;
+    }
+
+    @include breakpoint-1200 {
+      padding: 10px;
+    }
   }
 
   &__list {
@@ -53,14 +75,24 @@
   &__right {
     @include flex-align-center;
     gap: 20px;
+
+    @include breakpoint-1200 {
+      order: 1;
+    }
   }
 
   &__button {
     border-radius: 20px;
     padding: 10px 16px;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1em;
+    letter-spacing: 0.5px;
     white-space: nowrap;
+    text-transform: uppercase;
+
+    @include breakpoint-1200 {
+      display: none;
+    }
   }
 
   &__social {
@@ -81,11 +113,21 @@
       &--telegram {
         width: 28px;
         height: 24px;
+
+        @include breakpoint-tablet {
+          width: 24px;
+          height: 20px;
+        }
       }
 
       &--whatsapp {
         width: 28px;
         height: 28px;
+
+        @include breakpoint-tablet {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }

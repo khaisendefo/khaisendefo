@@ -1,0 +1,62 @@
+.header-burger {
+  z-index: 1000;
+  display: none;
+  padding: 12px 0;
+  background: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  @include breakpoint-1200 {
+    display: inline-block;
+    order: 3;
+  }
+
+  span {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 30px;
+    width: 20px;
+    height: 2px;
+    background: var(--neutral-color-20);
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 30px;
+      width: 25px;
+      height: 2px;
+      background: var(--neutral-color-20);
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+
+  &.active {
+    span {
+      background: transparent;
+  
+      &::before {
+        background: var(--neutral-color-20);
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+  
+      &::after {
+        background: var(--neutral-color-20);
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+    }
+  }
+}
+
