@@ -1,5 +1,7 @@
 .header {
   &__fixed {
+    position: relative;
+    z-index: var(--z-index-3);
     border-bottom: 1px solid var(--neutral-color-30);
     padding: 22px 0;
 
