@@ -1,7 +1,8 @@
 .hero {
   position: relative;
+  border-bottom: 1px solid var(--neutral-color-30);
   padding: 80px 0;
-  height: 100dvh;
+  height: calc(100dvh - 96px);
 
   &__inner {
     margin: 0 auto;
@@ -19,7 +20,6 @@
       top: 100px;
       right: -40%;
       z-index: var(--z-index-2);
-      opacity: 0.8;
     }
   }
 
@@ -35,9 +35,11 @@
   }
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+    height: 67px;
     line-height: 1.4;
     text-transform: uppercase;
+    transition: all var(--transition);
 
     & span {
       color: var(--neutral-color-40);
@@ -45,7 +47,16 @@
   }
 
   &__description {
+    margin-bottom: 50px;
     color: var(--neutral-color-70);
+  }
+
+  &__button {
+    border-radius: 30px;
+    padding: 16px 30px;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-transform: uppercase;
   }
 
   &__cube {

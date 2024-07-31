@@ -1,15 +1,20 @@
 .sidebar-menu {
   position: fixed;
   top: 0;
-  z-index: var(--z-index-4);
+  z-index: var(--z-index-5);
   overflow-y: auto;
   width: 330px;
   height: 100dvh;
   background: var(--neutral-color-50);
+  opacity: 0;
+  visibility: hidden;
   transform: translateX(-100%);
-  transition: transform var(--transition);
+  transition: 
+    transform var(--transition), opacity var(--transition), visibility var(--transition);
 
   &.active {
+    opacity: 1;
+    visibility: visible;
     transform: translateX(0);
   }
 
