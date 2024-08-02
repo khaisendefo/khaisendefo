@@ -1,0 +1,107 @@
+.about {
+  position: relative;
+  padding: 50px 0;
+  height: 100vh;
+
+  &__decor {
+    position: absolute;
+    top: -400px;
+    left: -35%;
+    z-index: var(--z-index-2);
+
+    &-two {
+      position: absolute;
+      top: 50px;
+      right: -35%;
+      z-index: var(--z-index-2);
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: var(--z-index-3);
+    display: flex;
+    gap: 30px;
+  }
+
+  &__information {
+    &-box {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 10px;
+      padding: 40px 25px 25px;
+      background-color: var(--neutral-color-10);
+    }
+
+    &-title {
+      position: absolute;
+      top: -23px; 
+      left: 25px;
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 10px;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      color: var(--neutral-color-40);
+      background-color: var(--neutral-color-10);
+    }
+
+    &-description {
+      color: var(--neutral-color-70);
+    }
+  }
+
+  &__right {
+    position: relative;
+    border-radius: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: -20px;
+      z-index: var(--z-index-2);
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 10px; 
+      width: 550px;
+      height: 572px;
+    }
+
+    &-sticker {
+      position: absolute;
+      bottom: -36px;
+      left: 50%;
+      z-index: var(--z-index-4);
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 10px;
+      padding: 10px 0;
+      width: 350px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: var(--neutral-color-50);
+      transform: translateX(-50%);
+    }
+ 
+    &-name {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 1.2em;
+      color: var(--neutral-color-40);
+    }
+
+    &-profession {
+      font-weight: 500;
+      font-size: 1em;
+      color: var(--neutral-color-20);
+    }
+    
+    & img {
+      position: relative;
+      z-index: var(--z-index-3);
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 10px;
+      min-width: 550px;
+    }
+  }
+}

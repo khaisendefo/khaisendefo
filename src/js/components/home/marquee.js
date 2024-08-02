@@ -1,18 +1,49 @@
+// export function marqueeScroll() {
+//   document.addEventListener('scroll', () => {
+//     const scrollY = window.scrollY;
+//     const marqueeLeft = document.querySelector('.marquee__list--left');
+//     const marqueeRight = document.querySelector('.marquee__list--right');
+//     if (marqueeLeft) {
+//       marqueeLeft.style.transform = `translateX(-${scrollY}px)`;
+//     }
+//     if (marqueeRight) {
+//       marqueeRight.style.transform = `translateX(${scrollY}px)`;
+//     }
+//   });
+// }
+
+
 export function marqueeScroll() {
-  document.addEventListener('scroll', () => {
+  const marqueeSection = document.querySelector('.marquee');
+
+  if (!marqueeSection) {
+    return;
+  }
+
+  const marqueeLeft = document.querySelector('.marquee__list--left');
+  const marqueeRight = document.querySelector('.marquee__list--right');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        document.addEventListener('scroll', handleScroll);
+      } else {
+        document.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  observer.observe(marqueeSection);
+
+  function handleScroll() {
     const scrollY = window.scrollY;
 
-    const marqueeLeft = document.querySelector('.marquee__list--left');
-    const marqueeRight = document.querySelector('.marquee__list--right');
-
-    // Устанавливаем прокрутку для списка слева
     if (marqueeLeft) {
       marqueeLeft.style.transform = `translateX(-${scrollY}px)`;
     }
 
-    // Устанавливаем прокрутку для списка справа
     if (marqueeRight) {
       marqueeRight.style.transform = `translateX(${scrollY}px)`;
     }
-  });
+  }
 }
