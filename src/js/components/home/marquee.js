@@ -1,18 +1,3 @@
-// export function marqueeScroll() {
-//   document.addEventListener('scroll', () => {
-//     const scrollY = window.scrollY;
-//     const marqueeLeft = document.querySelector('.marquee__list--left');
-//     const marqueeRight = document.querySelector('.marquee__list--right');
-//     if (marqueeLeft) {
-//       marqueeLeft.style.transform = `translateX(-${scrollY}px)`;
-//     }
-//     if (marqueeRight) {
-//       marqueeRight.style.transform = `translateX(${scrollY}px)`;
-//     }
-//   });
-// }
-
-
 export function marqueeScroll() {
   const marqueeSection = document.querySelector('.marquee');
 

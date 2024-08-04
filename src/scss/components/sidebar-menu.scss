@@ -24,6 +24,7 @@
 
   &__container {
     @include flex-column;
+    gap: 20px;
     justify-content: space-between;
     min-height: 100dvh;
   }

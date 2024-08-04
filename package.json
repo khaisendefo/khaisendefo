@@ -27,6 +27,7 @@
     "vite-plugin-minify": "^1.5.2"
   },
   "dependencies": {
+    "fslightbox": "^3.4.1",
     "typed.js": "^2.1.0"
   }
 }

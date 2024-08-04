@@ -1,3 +1,6 @@
+// import js library
+import 'fslightbox';
+
 // import style
 import '/scss/main.scss';
 
@@ -12,3 +15,39 @@ useToggle();
 useSidebarMenu();
 initializeTyped();
 marqueeScroll();
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cube = document.querySelector('.about__cube');
+  if (!cube) {
+    return;
+  }
+
+  let lastScrollY = window.scrollY;
+  let rotationAngle = 0;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        document.addEventListener('scroll', handleScroll);
+      } else {
+        document.removeEventListener('scroll', handleScroll);
+      }
+    });
+  });
+
+  observer.observe(cube);
+  
+  function handleScroll() {
+    const scrollY = window.scrollY;
+    const scrollDelta = scrollY - lastScrollY;
+    
+    rotationAngle += scrollDelta * 0.3;
+
+    cube.style.transform = `rotate(${rotationAngle}deg)`;
+
+    lastScrollY = scrollY;
+  }
+});
