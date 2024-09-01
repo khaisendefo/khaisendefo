@@ -1,7 +1,6 @@
 .about {
   position: relative;
-  padding: 50px 0;
-  height: 100vh;
+  padding: 50px 0 110px;
 
   &__cube {
     position: absolute;
@@ -93,7 +92,7 @@
       transition: transform var(--transition);
 
       &:hover {
-        transform: scale(1.02);
+        transform: scale(1.04);
       }
     }
   }

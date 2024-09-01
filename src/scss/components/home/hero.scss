@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  border-bottom: 1px solid var(--neutral-color-30);
   padding: 80px 0;
 
   &__inner {
@@ -52,11 +51,51 @@
   }
 
   &__button {
+    @include flex-between;
+    align-items: center;
     border-radius: 30px;
-    padding: 16px 30px;
-    font-weight: 500;
-    font-size: 1.2em;
-    text-transform: uppercase;
+    padding: 7px;
+    min-width: 290px;
+
+    & span {
+      position: relative;
+      margin: 0 auto;
+      font-weight: 600;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    &-icon {
+     position: relative;
+     z-index: var(--z-index-2);
+     border-radius: 50%;
+     width: 43px;
+     height: 43px;
+     background-color: var(--neutral-color-10);
+     transition: background-color var(--transition);
+
+      & svg {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translate(50%, -50%);
+
+        & path {
+          fill: var(--neutral-color-20);
+          transition: fill var(--transition);
+        }
+      }
+    }
+
+    &:hover &-icon {
+      background-color: var(--neutral-color-40);
+    }
+
+    &:hover path {
+      fill: var(--neutral-color-10);
+    }
   }
 
   &__cube {
@@ -138,29 +177,33 @@
     }
   }
 
-  &__bottom {
-    @include flex-justify-center;
-  }
-
   &__btn-scroll-down {
     @include flex-all-center;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
     border: 2px solid var(--neutral-color-40);
     border-radius: 25px;
     width: 41px;
     height: 60px;
-    background-color: var(--neutral-color-40);
-    transition: background-color var(--transition);
+    opacity: 0.6;
+    transform: translateX(50%);
+    transition: background-color var(--transition), opacity var(--transition);
 
     & svg {
       width: 18px;
       height: 18px;
       transition: all var(--transition);
       animation: hero-arrow 1.5s infinite;
+    }
 
-      & path {
-        fill: var(--neutral-color-10);
-        transition: fill var(--transition);
-      }
+    &-path {
+      fill: var(--neutral-color-40);
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      opacity: 1;
     }
 
     @keyframes hero-arrow {
@@ -170,18 +213,6 @@
 
       50% {
         transform: translateY(-4px);
-      }
-    }
-
-    &:hover {
-      background-color: transparent;
-
-      & path {
-        fill: var(--neutral-color-40);
-      }
-
-      & svg {
-        animation: none; 
       }
     }
   }

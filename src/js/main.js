@@ -17,8 +17,7 @@ initializeTyped();
 marqueeScroll();
 
 
-
-
+// АНИМАЦИЯ КУБА
 document.addEventListener('DOMContentLoaded', () => {
   const cube = document.querySelector('.about__cube');
   if (!cube) {
