@@ -1,7 +1,11 @@
 .reviews {
+  position: relative;
+  z-index: var(--z-index-5);
   padding: 50px 0;
 
   &__head {
+    @include flex-between;
+    align-items: end;
     margin-bottom: 30px;
   }
 
@@ -12,5 +16,102 @@
   &__description {
     max-width: 750px;
     color: var(--neutral-color-70);
+  }
+
+  &__slider {
+    &-nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    &-nav-arrow {
+      position: relative;
+      border: 1px solid var(--neutral-color-40);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: var(--neutral-color-40);
+      transition: opacity var(--transition);
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      & svg {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    &-arrow--is-disabled {
+      opacity: 0.4;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+
+    &-carousel {
+      display: flex;
+      gap: 25px;
+    }
+
+    &-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 390px;
+      background-color: var(--neutral-color-50);
+      transition: border var(--transition), transform var(--transition);
+
+      &--last {
+        @include flex-all-center;
+      }
+
+      &-link {
+        padding: 15px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: var(--neutral-color-40);
+        transition: opacity var(--transition);
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      &-head {
+        @include flex-align-center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      &-avatar {
+        border: 2px solid var(--neutral-color-40);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+
+        & img {
+          border-radius: 50%;
+        }
+      }
+
+      &-name {
+        margin-bottom: 5px;
+        color: var(--neutral-color-40);
+      }
+
+      &-description {
+        line-height: 1.3;
+        color: var(--neutral-color-70);
+      }
+    }
   }
 }
