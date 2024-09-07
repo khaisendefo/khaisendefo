@@ -10,14 +10,28 @@
   &__decor {
     position: absolute;
     top: -600px;
-    left: -35%;
+    left: -70%;
     z-index: var(--z-index-2);
 
     &-two {
       position: absolute;
       top: 50px;
-      right: -35%;
+      right: -70%;
       z-index: var(--z-index-2);
+    }
+    
+    &-code {
+      position: absolute;
+      top: 40%;
+      left: -35%;
+      background-color: transparent !important;
+      opacity: 0.3;
+      transform: rotate(-90deg);
+
+      & code {
+        font-size: 1.3em;
+        color: var(--neutral-color-40);
+      }
     }
   }
 
@@ -47,6 +61,7 @@
 
   &__description {
     margin-bottom: 50px;
+    max-width: 650px;
     color: var(--neutral-color-70);
   }
 
@@ -55,13 +70,13 @@
     align-items: center;
     border-radius: 30px;
     padding: 7px;
-    min-width: 290px;
+    min-width: 270px;
 
     & span {
       position: relative;
       margin: 0 auto;
       font-weight: 600;
-      font-size: 1.2em;
+      font-size: 1em;
       text-transform: uppercase;
     }
 
@@ -69,8 +84,8 @@
      position: relative;
      z-index: var(--z-index-2);
      border-radius: 50%;
-     width: 43px;
-     height: 43px;
+     width: 40px;
+     height: 40px;
      background-color: var(--neutral-color-10);
      transition: background-color var(--transition);
 
@@ -78,8 +93,8 @@
         position: absolute;
         top: 50%;
         right: 50%;
-        width: 20px;
-        height: 20px;
+        width: 17px;
+        height: 17px;
         transform: translate(50%, -50%);
 
         & path {

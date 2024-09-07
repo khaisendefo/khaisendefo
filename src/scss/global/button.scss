@@ -1,5 +1,12 @@
 .green-button { 
   border: 2px solid var(--neutral-color-40);
+  border-radius: 30px;
+  padding: 18px 0;
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  text-transform: uppercase;
   color: var(--neutral-color-10);
   background-color: var(--neutral-color-40);
   transition: all var(--transition);
@@ -7,5 +14,24 @@
   &:hover {
     color: var(--neutral-color-40);
     background-color: transparent; 
+  }
+}
+
+.button-transparent {
+  border: 2px solid var(--neutral-color-40);
+  border-radius: 30px;
+  padding: 18px 0;
+  font-weight: 600;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: var(--neutral-color-40);
+  background-color: transparent;
+  transition: all var(--transition);
+
+  &:hover {
+    color: var(--neutral-color-10);
+    background-color: var(--neutral-color-40);
   }
 }

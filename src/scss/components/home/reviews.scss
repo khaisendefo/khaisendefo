@@ -1,0 +1,16 @@
+.reviews {
+  padding: 50px 0;
+
+  &__head {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    max-width: 750px;
+    color: var(--neutral-color-70);
+  }
+}

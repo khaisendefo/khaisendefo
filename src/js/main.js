@@ -18,35 +18,106 @@ marqueeScroll();
 
 
 // АНИМАЦИЯ КУБА
-document.addEventListener('DOMContentLoaded', () => {
-  const cube = document.querySelector('.about__cube');
-  if (!cube) {
-    return;
-  }
+// document.addEventListener('DOMContentLoaded', () => {
+//   const cube = document.querySelector('.about__cube');
+//   if (!cube) {
+//     return;
+//   }
+//   let lastScrollY = window.scrollY;
+//   let rotationAngle = 0;
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         document.addEventListener('scroll', handleScroll);
+//       } else {
+//         document.removeEventListener('scroll', handleScroll);
+//       }
+//     });
+//   });
+//   observer.observe(cube); 
+//   function handleScroll() {
+//     const scrollY = window.scrollY;
+//     const scrollDelta = scrollY - lastScrollY; 
+//     rotationAngle += scrollDelta * 0.3;
+//     cube.style.transform = `rotate(${rotationAngle}deg)`;
+//     lastScrollY = scrollY;
+//   }
+// });
 
-  let lastScrollY = window.scrollY;
-  let rotationAngle = 0;
+// АНИМАЦИЯ СМЕЩЕНИЯ ЭЛЕМЕНТА ВНИЗ
+// document.addEventListener('DOMContentLoaded', () => {
+//   const cubeVector = document.querySelector('.hero__cube-vector');
+//   if (!cubeVector) {
+//     return;
+//   }
+//   let lastScrollY = window.scrollY;
+//   let translateY = 0;
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         document.addEventListener('scroll', handleScroll);
+//       } else {
+//         document.removeEventListener('scroll', handleScroll);
+//       }
+//     });
+//   });
+//   observer.observe(cubeVector);
+//   function handleScroll() {
+//     if (window.innerWidth <= 768) {
+//       return; 
+//     }
+//     const scrollY = window.scrollY;
+//     const scrollDelta = scrollY - lastScrollY;
+//     translateY += scrollDelta * 0.2; 
+//     cubeVector.style.transform = `translateY(${translateY}px)`;
+//     lastScrollY = scrollY;
+//   }
+// });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        document.addEventListener('scroll', handleScroll);
-      } else {
-        document.removeEventListener('scroll', handleScroll);
-      }
-    });
-  });
+// АНИМАЦИЯ СМЕЩЕНИЯ ЭЛЕМЕНТОВ ВНИЗ
+// document.addEventListener('DOMContentLoaded', () => {
+//   const elements = document.querySelectorAll(
+//     '.animate-on-scroll, '
+//   );
 
-  observer.observe(cube);
-  
-  function handleScroll() {
-    const scrollY = window.scrollY;
-    const scrollDelta = scrollY - lastScrollY;
-    
-    rotationAngle += scrollDelta * 0.3;
+//   if (elements.length === 0) {
+//     return;
+//   }
 
-    cube.style.transform = `rotate(${rotationAngle}deg)`;
+//   let lastScrollY = window.scrollY;
+//   const translateYValues = new Map();
 
-    lastScrollY = scrollY;
-  }
-});
+//   elements.forEach((element) => {
+//     translateYValues.set(element, 0);
+
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           document.addEventListener('scroll', handleScroll);
+//         } else {
+//           document.removeEventListener('scroll', handleScroll);
+//         }
+//       });
+//     });
+
+//     observer.observe(element);
+//   });
+
+//   function handleScroll() {
+//     if (window.innerWidth <= 768) {
+//       return;
+//     }
+
+//     const scrollY = window.scrollY;
+//     const scrollDelta = scrollY - lastScrollY;
+
+//     elements.forEach((element) => {
+//       let translateY = translateYValues.get(element);
+//       translateY += scrollDelta * 0.2;
+//       element.style.transform = `translateY(${translateY}px)`;
+//       translateYValues.set(element, translateY);
+//     });
+
+//     lastScrollY = scrollY;
+//   }
+// });

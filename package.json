@@ -27,8 +27,8 @@
     "vite-plugin-minify": "^1.5.2"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "fslightbox": "^3.4.1",
-    "gsap": "^3.12.5",
     "typed.js": "^2.1.0"
   }
 }
