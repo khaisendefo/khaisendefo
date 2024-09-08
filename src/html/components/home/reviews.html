@@ -7,12 +7,12 @@
           <p class="reviews__description text-description">Мнения клиентов — лучшее подтверждение качества работы. Ознакомьтесь с их впечатлениями о сотрудничестве и убедитесь в надежности моей работы.</p>
         </div>
         <nav class="reviews__slider-nav">
-          <button class="reviews__slider-nav-prev reviews__slider-nav-arrow">
+          <button class="reviews__slider-nav-prev reviews__slider-nav-arrow" aria-label="Прердыдущий слайд">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
             </svg>
           </button>
-          <button class="reviews__slider-nav-next reviews__slider-nav-arrow">
+          <button class="reviews__slider-nav-next reviews__slider-nav-arrow" aria-label="Следущий слайд">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
             </svg>
@@ -23,7 +23,7 @@
         <div class="reviews__slider splide">
           <div class="reviews__slider-track splide__track">
             <div class="reviews__slider-carousel splide__list">
-              <article class="reviews__slider-card splide__slide">
+              <article class="reviews__slider-card splide__slide reviews__slider-card--one">
                 <div class="reviews__slider-card-head">
                   <div class="reviews__slider-card-avatar">
                     <img width="60" height="65" loading="lazy" src="/assets/images/avatar/kirill.jpg" alt="Кирилл Маркетолог">
@@ -42,7 +42,7 @@
                   </div>
                 </div>
               </article>
-              <article class="reviews__slider-card splide__slide">
+              <article class="reviews__slider-card splide__slide reviews__slider-card--two">
                 <div class="reviews__slider-card-head">
                   <div class="reviews__slider-card-avatar">
                     <img width="60" height="65" loading="lazy" src="/assets/images/avatar/sergey.jpg" alt="Сергей Контекстолог">
@@ -61,7 +61,7 @@
                   </div>
                 </div>
               </article>
-              <article class="reviews__slider-card splide__slide">
+              <article class="reviews__slider-card splide__slide reviews__slider-card--three">
                 <div class="reviews__slider-card-head">
                   <div class="reviews__slider-card-avatar">
                     <img width="60" height="65" loading="lazy" src="/assets/images/avatar/dmitriy.jpg" alt="Дмитрий Программист">
@@ -80,7 +80,7 @@
                   </div>
                 </div>
               </article>
-              <article class="reviews__slider-card splide__slide">
+              <article class="reviews__slider-card splide__slide reviews__slider-card--four">
                 <div class="reviews__slider-card-head">
                   <div class="reviews__slider-card-avatar">
                     <img width="60" height="65" loading="lazy" src="/assets/images/avatar/sergey-2.jpg" alt="Сергей Seo">
@@ -99,7 +99,7 @@
                   </div>
                 </div>
               </article>
-              <article class="reviews__slider-card splide__slide">
+              <article class="reviews__slider-card splide__slide reviews__slider-card--five">
                 <div class="reviews__slider-card-head">
                   <div class="reviews__slider-card-avatar">
                     <img width="60" height="65" loading="lazy" src="/assets/images/avatar/eva.jpg" alt="Ева Дизайнер">
@@ -118,8 +118,114 @@
                   </div>
                 </div>
               </article>
-              <article class="reviews__slider-card reviews__slider-card--last splide__slide">
+              <article class="reviews__slider-card--last splide__slide">
                 <a class="reviews__slider-card-link text-medium" href="https://kwork.ru/user/khaisendefo" target="_blank">Больше отзывов</a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__popup">
+          <div class="reviews__popup-overlay">
+            <button class="reviews__popup-close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+              </svg>
+            </button>
+            <div class="reviews__popup-content">
+              <article class="reviews__popup-card reviews__popup-card--1">
+                <div class="reviews__popup-card-head">
+                  <div class="reviews__popup-card-avatar">
+                    <img width="60" height="65" loading="lazy" src="/assets/images/avatar/kirill.jpg" alt="Кирилл Маркетолог">
+                  </div>
+                  <div class="reviews__popup-card-info">
+                    <h3 class="reviews__popup-card-name text-default">Кирилл Маркетолог</h3>
+                    <div class="reviews__popup-card-rating">
+                      <img loading="lazy" width="76" height="16" src="/assets/icons/stars.svg" alt="Рейтинг 5 звезд иконка">
+                    </div>
+                  </div>
+                </div>
+                <p class="reviews__popup-card-description description-small">Заказ был выполнен очень быстро, довольно грамотный и что очень важно, компетентный фрилансер. Быстро пришли к общему решению по задаче, что очень радует! Однозначно рекомендую!</p>
+                <div class="reviews__popup-card-bottom">
+                  <div class="reviews__popup-card-kwork">
+                    <img loading="lazy" width="100" height="20" src="/assets/icons/kwork.svg" alt="Логотип Kwork">
+                  </div>
+                </div>
+              </article>
+              <article class="reviews__popup-card reviews__popup-card--2">
+                <div class="reviews__popup-card-head">
+                  <div class="reviews__popup-card-avatar">
+                    <img width="60" height="65" loading="lazy" src="/assets/images/avatar/sergey.jpg" alt="Сергей Контекстолог">
+                  </div>
+                  <div class="reviews__popup-card-info">
+                    <h3 class="reviews__popup-card-name text-default">Сергей Контекстолог</h3>
+                    <div class="reviews__popup-card-rating">
+                      <img loading="lazy" width="76" height="16" src="/assets/icons/stars.svg" alt="Рейтинг 5 звезд иконка">
+                    </div>
+                  </div>
+                </div>
+                <p class="reviews__popup-card-description description-small">Спасибо огромное за сайт! Несколько лет откладывал и думал над сайтом, а тут раз и за 1 день сделали всё, спасибо! ! : )</p>
+                <div class="reviews__popup-card-bottom">
+                  <div class="reviews__popup-card-kwork">
+                    <img loading="lazy" width="100" height="20" src="/assets/icons/kwork.svg" alt="Логотип Kwork">
+                  </div>
+                </div>
+              </article>
+              <article class="reviews__popup-card reviews__popup-card--3">
+                <div class="reviews__popup-card-head">
+                  <div class="reviews__popup-card-avatar">
+                    <img width="60" height="65" loading="lazy" src="/assets/images/avatar/dmitriy.jpg" alt="Дмитрий Программист">
+                  </div>
+                  <div class="reviews__popup-card-info">
+                    <h3 class="reviews__popup-card-name text-default">Дмитрий Программист</h3>
+                    <div class="reviews__popup-card-rating">
+                      <img loading="lazy" width="76" height="16" src="/assets/icons/stars.svg" alt="Рейтинг 5 звезд иконка">
+                    </div>
+                  </div>
+                </div>
+                <p class="reviews__popup-card-description description-small">Хаят прекрасно справился с поставленной задачей, исполнил все пожелания крайне оперативно и профессионально. Спасибо!</p>
+                <div class="reviews__popup-card-bottom">
+                  <div class="reviews__popup-card-kwork">
+                    <img loading="lazy" width="100" height="20" src="/assets/icons/kwork.svg" alt="Логотип Kwork">
+                  </div>
+                </div>
+              </article>
+              <article class="reviews__popup-card reviews__popup-card--4">
+                <div class="reviews__popup-card-head">
+                  <div class="reviews__slider-card-avatar">
+                    <img width="60" height="65" loading="lazy" src="/assets/images/avatar/sergey-2.jpg" alt="Сергей Seo">
+                  </div>
+                  <div class="reviews__popup-card-info">
+                    <h3 class="reviews__popup-card-name text-default">Сергей Seo</h3>
+                    <div class="reviews__popup-card-rating">
+                      <img loading="lazy" width="76" height="16" src="/assets/icons/stars.svg" alt="Рейтинг 5 звезд иконка">
+                    </div>
+                  </div>
+                </div>
+                <p class="reviews__popup-card-description description-small">Не первый раз обращаюсь, к данном исполнителю, качество и компетентность на высшем уровне. Благодарю !</p>
+                <div class="reviews__popup-card-bottom">
+                  <div class="reviews__popup-card-kwork">
+                    <img loading="lazy" width="100" height="20" src="/assets/icons/kwork.svg" alt="Логотип Kwork">
+                  </div>
+                </div>
+              </article>
+              <article class="reviews__popup-card reviews__popup-card--5">
+                <div class="reviews__popup-card-head">
+                  <div class="reviews__slider-card-avatar">
+                    <img width="60" height="65" loading="lazy" src="/assets/images/avatar/eva.jpg" alt="Ева Дизайнер">
+                  </div>
+                  <div class="reviews__popup-card-info">
+                    <h3 class="reviews__popup-card-name text-default">Ева Дизайнер</h3>
+                    <div class="reviews__popup-card-rating">
+                      <img loading="lazy" width="76" height="16" src="/assets/icons/stars.svg" alt="Рейтинг 5 звезд иконка">
+                    </div>
+                  </div>
+                </div>
+                <p class="reviews__popup-card-description description-small">Обратилась к Хаяту за помощью, нужно было сделать адаптив для сайта. Выполнил все быстро, качественно. Осталась довольна. Буду обращаться снова</p>
+                <div class="reviews__popup-card-bottom">
+                  <div class="reviews__popup-card-kwork">
+                    <img loading="lazy" width="100" height="20" src="/assets/icons/kwork.svg" alt="Логотип Kwork">
+                  </div>
+                </div>
               </article>
             </div>
           </div>
