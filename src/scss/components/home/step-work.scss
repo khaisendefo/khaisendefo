@@ -1,0 +1,44 @@
+.step-work {
+  padding: 50px 0;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  &__row {
+    @include flex-align-center;
+    gap: 20px;
+  }
+
+  &__number {
+    @include flex-all-center;
+    border-radius: 10px;
+    min-width: 70px;
+    min-height: 70px;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--neutral-color-10);
+    background-color: var(--neutral-color-40);
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    color: var(--neutral-color-40);
+  }
+
+  &__description {
+    color: var(--neutral-color-70);
+  }
+}
