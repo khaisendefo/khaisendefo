@@ -29,6 +29,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "fslightbox": "^3.4.1",
+    "inputmask": "^5.0.9",
     "typed.js": "^2.1.0"
   }
 }

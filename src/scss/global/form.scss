@@ -1,0 +1,71 @@
+.form {
+  &-label {
+    width: 100%;
+  }
+
+  &-input {
+    border: 1px solid var(--neutral-color-70);
+    border-radius: 30px;
+    padding: 20px 25px;
+    width: 100%;
+    color: var(--neutral-color-20);
+    background-color: var(--neutral-color-50);
+
+    &::placeholder {
+      color: var(--neutral-color-70);
+    }
+
+    &:focus {
+      border: 1px solid var(--neutral-color-40);
+    }
+  }
+
+  &-select {
+    padding: 15px;
+  }
+
+  &-label-checkbox {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &-checkbox {
+    appearance: none;
+    position: absolute;
+
+    &-label {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    &-view {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      border: 1px solid #db1c1c;
+      border-radius: 6px;
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      transition: .3s;
+    }
+
+    &-icon {
+      opacity: 0;
+      transition: .3s;
+    }
+
+    &:checked + &-view {
+      background-color: #00fa00;
+    }
+
+    &:checked + &-view &-icon {
+      opacity: 1;
+    }
+  }
+}

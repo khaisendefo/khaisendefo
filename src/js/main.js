@@ -1,5 +1,6 @@
 // import js library
 import 'fslightbox';
+import Inputmask from "inputmask";
 
 // import style
 import '/scss/main.scss';
@@ -12,6 +13,11 @@ import { marqueeScroll } from './components/home/marquee.js';
 import { initSlider } from './components/home/splide.js';
 import { reviewsModal } from './components/home/reviews-modal.js';
 
+
+// input mask
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask('+7(999) 999-99-99');
+    im.mask(inputs);
 
 document.addEventListener('DOMContentLoaded', () => {
     initSlider(); 
