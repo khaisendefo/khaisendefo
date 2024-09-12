@@ -13,4 +13,126 @@
     max-width: 750px;
     color: var(--neutral-color-70);
   }
+
+  &__case {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  &__project {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 10px;
+    padding: 30px;
+    background-color: var(--neutral-color-50);
+    transition: border var(--transition), transform var(--transition);
+
+    &:hover {
+      border: 1px solid var(--neutral-color-40);
+      transform: scale(1.01);
+    }
+
+    &-decor {
+      position: absolute;
+      top: 15px; 
+      right: -30px;
+      
+      & svg {
+        width: 170px;
+        height: 170px;
+        transition: transform var(--transition);
+      }
+    }
+
+    &-eclips {
+      position: absolute;
+      right: -40px;
+      bottom: -10px;
+      opacity: 0.8;
+      transform: rotate(90deg);
+      
+      & svg {
+        width: 300px;
+        height: 300px;
+        transition: transform var(--transition);
+      }
+    }
+
+    &:hover svg {
+      transform: scale(1.1);
+   }
+
+    &-info {
+      position: relative;
+      z-index: var(--z-index-2);
+      margin-bottom: 30px;
+    }
+
+    &-name {
+      margin-bottom: 20px;
+      color: var(--neutral-color-20);
+
+      & span {
+        font-style: italic;
+        color: var(--neutral-color-40);
+      }
+    }
+
+    &-description {
+      margin-bottom: 30px;
+      color: var(--neutral-color-70);
+    }
+
+    &-tags {
+      @include flex-align-center;
+      gap: 15px;
+    }
+
+    &-box {
+      @include flex-all-center;
+      position: relative;
+      z-index: var(--z-index-2);
+      overflow: hidden;
+      margin-bottom: 30px;
+      border: 1px solid var(--neutral-color-30);
+      border-radius: 10px;
+      padding: 30px 20px;
+      background-color: var(--neutral-color-10);
+    }
+
+    &-laptop {
+      position: relative;
+      z-index: var(--z-index-2);
+      max-width: 450px;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    &-btn {
+      @include flex-align-center;
+      gap: 15px;
+      width: 100%;
+    }
+    
+    &-more,
+    &-preview {
+      display: block;
+      min-width: 200px;
+      text-align: center;
+    }
+
+    &-last {
+      @include flex-all-center;
+    }
+
+    &-button {
+      min-width: 200px;
+      text-align: center;
+    }
+  }
 }

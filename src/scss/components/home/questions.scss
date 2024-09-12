@@ -1,0 +1,111 @@
+.questions {
+  padding: 50px 0;
+
+  &__head {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    @include flex-column;
+    gap: 20px;
+  }
+
+  &__accordion {
+    position: relative;
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 10px;
+    padding: 30px;
+    height: auto;
+    background-color: var(--neutral-color-50);
+    transition: border var(--transition);
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid var(--neutral-color-40);
+    }
+
+    &.active {
+      border: 1px solid var(--neutral-color-40);
+    }
+
+    &-row {
+      @include flex-all-between;
+    }
+
+    &-title {
+      color: var(--neutral-color-40);
+    }
+
+    &-arrow {
+      position: relative;
+      border: 1px solid var(--neutral-color-40);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      transition: transform var(--accordion-transtion), background-color var(--transition);
+
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 16px;
+        height: 16px;
+        transform: translate(50%, -50%);
+      }
+
+      & path {
+        fill: var(--neutral-color-40);
+        transition: fill var(--accordion-transtion);
+      }
+
+      &.active {
+        background-color: var(--neutral-color-40);
+        transform: rotate(90deg); 
+
+        & path {
+          fill: var(--neutral-color-10);
+        }
+      }
+    }
+
+    &-content {
+      overflow: hidden;
+      padding-top: 0;
+      max-height: 0;
+      transition: max-height var(--accordion-transtion);
+    }
+
+    &-content.active {
+      max-height: auto;
+    }
+
+    &-description {
+      max-width: 750px;
+      line-height: 1.4;
+      color: var(--neutral-color-70);
+    }
+
+    &-list {
+      @include flex-column;
+      gap: 10px;
+    }
+
+    &-item {
+      @include flex-align-center;
+      gap: 10px;
+
+      & svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      & path {
+        fill: var(--neutral-color-40);
+      }
+
+      & span {
+        color: var(--neutral-color-70);
+      }
+    }
+  }
+}
