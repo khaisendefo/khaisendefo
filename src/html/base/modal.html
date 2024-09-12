@@ -1,0 +1,53 @@
+<div class="modal">
+  <div class="modal__overlay">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" title="закрыть">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+          </svg>
+        </button>
+        <div class="modal__head">
+          <h2 class="modal__head-title heading-title">Оставьте заявку</h2>
+          <p class="modal__head-description text-small">Заполните форму, и я свяжусь с вами ближайшие время.</p>
+        </div>
+        <form class="modal__form form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="cf855937-7877-408c-a5b8-a24ee231cb86">
+          <div class="modal__form-wrapper">
+            <label class="modal__form-label form-label" for="name">
+              <input class="modal__form-input form-input" required id="name" placeholder="Ваше имя" name="Имя" type="text">
+            </label>
+            <label class="modal__form-label form-label" for="tel">
+              <input class="modal__form-input form-input" required id="tel" placeholder="Ваш телефон" name="Телефон" type="tel">
+            </label>  
+            <label class="modal__form-label custom-select form-label" for="services" name="Тип услуги">
+              <select class="modal__form-select form-select" name="Тип услуги">
+                <option class="modal__form-option form-option" value="">Тип услуги</option>
+                <option class="modal__form-option form-option" value="Сайт визитка">Сайт визитка</option>
+                <option class="modal__form-option form-option" value="Лендинг">Лендинг</option>
+                <option class="modal__form-option form-option" value="Кооперативный сайт">Кооперативный сайт</option>
+                <option class="modal__form-option form-option" value="Верстка по макету">Верстка по макету</option>
+                <option class="modal__form-option form-option" value="Доработка сайта">Доработка сайта</option>
+              </select>
+            </label>
+            <label class="modal__form-label custom-select form-label" for="connect" name="Способ связи">
+              <select class="modal__form-select form-select" name="Способ связи">
+                <option class="modal__form-option form-option" value="">Как с вами связаться ?</option>
+                <option class="modal__form-option form-option" value="Телеграм">Телеграм</option>
+                <option class="modal__form-option form-option" value="WhatsApp">WhatsApp</option>
+              </select>
+            </label>
+          </div>
+          <textarea class="modal__form-textarea form-textarea" placeholder="Ваше сообщение..." name="Сообщение"></textarea>
+          <div class="modal__form-btn form-btn">
+            <button class="modal__form-button form-button green-button" type="submit">Отправить</button>
+            <button class="modal__form-reset form-reset button-transparent" type="reset">Cбросить</button>
+          </div>
+          <p class="modal__form-privacy form-privacy text-small">
+            Нажимая кнопку «Отправить» вы подтверждаете согласие на обработку персональных данных в соответствии с условиями <a href="#">Политики обработки данных</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

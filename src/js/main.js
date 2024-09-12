@@ -5,15 +5,17 @@ import Inputmask from "inputmask";
 // import style
 import '/scss/main.scss';
 
-// import components
-import { useToggle } from './components/toggle.js';
-import { useSidebarMenu } from './components/accordion-sidebar.js';
-import { initializeTyped } from './components/typed.js';
-import { marqueeScroll } from './components/home/marquee.js';
-import { initSlider } from './components/home/splide.js';
-import { reviewsModal } from './components/home/reviews-modal.js';
-import { useAccordion  } from './components/home/accordion.js';
+// import base components
+import { useToggle } from './components/base/toggle.js';
+import { initializeTyped } from './components/base/typed.js';
+import { useSidebarMenu } from './components/base/accordion-sidebar.js';
+import { customSelect } from './components/base/custom-select.js';
 
+// import home components
+import { reviewsModal } from './components/home/reviews-modal.js';
+import { initSlider } from './components/home/splide.js';
+import { useAccordion } from './components/home/accordion.js';
+import { marqueeScroll } from './components/home/marquee.js';
 
 // input mask
 let inputs = document.querySelectorAll('input[type="tel"]');
@@ -31,12 +33,40 @@ initializeTyped();
 marqueeScroll();
 reviewsModal();
 useAccordion();
+customSelect();
 
 
-
-
-
-
+// Открытие модалки
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.querySelector('.modal');
+    const modalButtons = document.querySelectorAll('.open-modal');
+    const modalClose = document.querySelector('.modal__close');
+    const form = document.querySelector('.modal__form'); 
+      if (modal && modalClose) {
+        modalButtons.forEach(button => {
+          button.addEventListener('click', openModal);
+        });
+      modalClose.addEventListener('click', closeModal);
+      window.addEventListener('click', outsideClick);
+      window.addEventListener('keydown', escapeClose);
+      }
+      function openModal() {
+        if (modal) {modal.style.display = 'block';}
+      }
+      function closeModal() {
+        if (modal) {modal.style.display = 'none'; clearForm();}
+      }
+      function outsideClick(e) {
+        if (modal && e.target === modal) {modal.style.display = 'none'; clearForm(); }
+      }
+      function escapeClose(e) {
+        if (modal && e.key === 'Escape') {modal.style.display = 'none'; clearForm();}
+      }
+      function clearForm() {
+        if (form) {form.reset();}
+      }
+    });
+  
 
 // АНИМАЦИЯ КУБА
 // document.addEventListener('DOMContentLoaded', () => {
