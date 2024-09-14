@@ -1,5 +1,4 @@
 // import js library
-import 'fslightbox';
 import Inputmask from "inputmask";
 
 // import style
@@ -9,13 +8,17 @@ import '/scss/main.scss';
 import { useToggle } from './components/base/toggle.js';
 import { initializeTyped } from './components/base/typed.js';
 import { useSidebarMenu } from './components/base/accordion-sidebar.js';
-import { customSelect } from './components/base/custom-select.js';
 
 // import home components
 import { reviewsModal } from './components/home/reviews-modal.js';
 import { initSlider } from './components/home/splide.js';
 import { useAccordion } from './components/home/accordion.js';
 import { marqueeScroll } from './components/home/marquee.js';
+
+// import custmo components
+import { customSelect } from './components/custom/custom-select.js';
+import { customCursor } from './components/custom/custom-cursor.js';
+
 
 // input mask
 let inputs = document.querySelectorAll('input[type="tel"]');
@@ -34,6 +37,7 @@ marqueeScroll();
 reviewsModal();
 useAccordion();
 customSelect();
+customCursor();
 
 
 // Открытие модалки

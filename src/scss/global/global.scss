@@ -119,3 +119,48 @@
   font-size: 0.9em;
   color: var(--neutral-color-40);
 }
+
+
+
+.cursor-dot,
+.cursor-dot-outline {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out; 
+  pointer-events: none;
+
+  @include breakpoint-tablet {
+    display: none;
+  }
+}
+
+.cursor-dot {
+  z-index: 10000;
+  width: 8px;
+  height: 8px;
+  background-color: var(--neutral-color-40); 
+}
+
+.cursor-dot-outline {
+  z-index: 9999;
+  border: 2px solid var(--neutral-color-40);
+  width: 30px;
+  height: 30px;
+}
+
+.cursor-dot-enlarged .cursor-dot {
+  transform: translate(-50%, -50%) scale(0.75);
+}
+
+.cursor-dot-enlarged .cursor-dot-outline {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+a:hover .cursor-dot, a:hover .cursor-dot-outline {
+  border-color: #47ff47; 
+  background-color: #47ff47; 
+}
