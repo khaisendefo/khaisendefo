@@ -55,6 +55,33 @@
   }
 }
 
+.hover-link {
+  position: relative;
+  transition: all var(--transition);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%; 
+      left: 0;
+      width: 100%; 
+      height: 2px;
+      background: var(--neutral-color-40);
+      transform: scaleX(0); 
+      transform-origin: right;
+      transition: transform .3s;
+    }
+
+    &:hover {
+      color: var(--neutral-color-40);
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+}
+
 .sidebar-overlay {
   position: fixed;
   top: 0; 

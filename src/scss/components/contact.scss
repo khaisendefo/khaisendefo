@@ -1,0 +1,63 @@
+.contact {
+  padding: 50px 0;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__body {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 150px);
+  }
+
+  &__platform {
+    position: relative;
+    z-index: var(--z-index-2);
+    overflow: hidden;
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--neutral-color-50);
+    transition: border var(--transition), transform var(--transition);
+
+    &:hover {
+      border: 1px solid var(--neutral-color-40);
+      transform: scale(0.95);
+    }
+
+    &-link {
+      @include flex-column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &-head {
+      @include flex-all-between;
+
+      & svg {
+        width: 25px;
+        height: 25px;
+      }
+
+      & path {
+        fill: var(--neutral-color-40);
+      }
+    }
+    
+    &-name,
+    &-title {
+      text-transform: uppercase;
+    }
+
+    &-title {
+      color: var(--neutral-color-40);
+    }
+
+    &-name {
+      font-weight: 400;
+      color: var(--neutral-color-20);
+    }
+  }
+}
