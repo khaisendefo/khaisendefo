@@ -1,7 +1,7 @@
 import '@splidejs/splide/dist/css/splide.min.css';
 import Splide from '@splidejs/splide';
 
-export function initSlider() {
+export const reviewsSlider = () => {
   const splide = new Splide('.splide', {
     perPage: 3,
     perMove: 1,

@@ -11,12 +11,8 @@
   }
 
   &__accordion {
-    position: relative;
-    border: 1px solid var(--neutral-color-30);
-    border-radius: 10px;
     padding: 30px;
     height: auto;
-    background-color: var(--neutral-color-50);
     transition: border var(--transition);
     cursor: pointer;
 
@@ -26,6 +22,10 @@
 
     &.active {
       border: 1px solid var(--neutral-color-40);
+    }
+
+    & path {
+      fill: var(--neutral-color-40);
     }
 
     &-row {
@@ -97,10 +97,6 @@
       & svg {
         width: 15px;
         height: 15px;
-      }
-
-      & path {
-        fill: var(--neutral-color-40);
       }
 
       & span {

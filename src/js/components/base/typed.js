@@ -1,6 +1,6 @@
 import Typed from 'typed.js';
 
-export const initializeTyped = () => {
+export const typedText = () => {
   new Typed('.typed-text', {
     strings: [
       'Разработка <span>уникального сайта</span> для вашего бизнеса',

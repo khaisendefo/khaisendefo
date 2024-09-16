@@ -1,4 +1,4 @@
-export function useToggle() {
+export const toggleMenu = () => {
   document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.querySelector('.header-burger');
     const nav = document.querySelector('.sidebar-menu');

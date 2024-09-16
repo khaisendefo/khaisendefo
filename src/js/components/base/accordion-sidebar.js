@@ -1,4 +1,4 @@
-export function useSidebarMenu() {
+export const accordionSidebar = () => {
   document.addEventListener('DOMContentLoaded', function () {
     var accordionRows = document.querySelectorAll('.sidebar-menu__row');
     accordionRows.forEach(function (row) {

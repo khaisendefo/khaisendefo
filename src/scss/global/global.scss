@@ -21,11 +21,6 @@
   background-color: var(--neutral-color-10);
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-}
-
 .container {
   position: relative;
   margin: 0 auto;
@@ -53,6 +48,13 @@
   @include breakpoint-tablet {
     font-size: 1.2em;
   }
+}
+
+.card {
+  position: relative;
+  border: 1px solid var(--neutral-color-30);
+  border-radius: 10px;
+  background-color: var(--neutral-color-50);
 }
 
 .hover-link {
@@ -119,8 +121,6 @@
   font-size: 0.9em;
   color: var(--neutral-color-40);
 }
-
-
 
 .cursor-dot,
 .cursor-dot-outline {

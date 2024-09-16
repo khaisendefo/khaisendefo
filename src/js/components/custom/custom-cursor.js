@@ -1,4 +1,4 @@
-export function customCursor() {
+export const customCursor = () => {
   document.addEventListener('DOMContentLoaded', function() {
     var cursor = {
       delay: 8,

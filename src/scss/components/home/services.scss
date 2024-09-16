@@ -42,11 +42,7 @@
   }
 
   &__card {
-    position: relative;
     overflow: hidden;
-    border: 1px solid var(--neutral-color-30);
-    border-radius: 10px;
-    background-color: var(--neutral-color-50);
     transition: border var(--transition), transform var(--transition);
      
     &:hover {

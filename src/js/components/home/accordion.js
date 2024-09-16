@@ -1,4 +1,4 @@
-export function useAccordion() {
+export const toggleAccordion = () => {
   document.addEventListener('DOMContentLoaded', function () {
     const accordionRows = document.querySelectorAll('.questions__accordion');
 
