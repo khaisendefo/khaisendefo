@@ -88,4 +88,11 @@
       margin-bottom: 20px;
     }
   }
+
+  &__thanks {
+    display: none;
+    width: 700px;
+    height: 500px;
+    background-color: var(--neutral-color-40);
+  }
 }

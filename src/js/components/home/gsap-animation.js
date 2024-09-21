@@ -2,16 +2,16 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 export const gsapAnimation = () => {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  gsap.registerPlugin(ScrollTrigger);
 
-ScrollSmoother.create({
+// ScrollSmoother.create({
 
-    wrapper: '.wrapper',
-    content: '.content',
-    smooth: 1.5,
-    effects: true,
+//     wrapper: '.wrapper',
+//     content: '.content',
+//     smooth: 1.5,
+//     effects: true,
 
-});
+// });
 
 gsap.utils.toArray(".title-animation").forEach((element) => {
   gsap.from(element, {

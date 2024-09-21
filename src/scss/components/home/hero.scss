@@ -19,20 +19,6 @@
       right: -70%;
       z-index: var(--z-index-2);
     }
-    
-    &-code {
-      position: absolute;
-      top: 40%;
-      left: -35%;
-      background-color: transparent !important;
-      opacity: 0.3;
-      transform: rotate(-90deg);
-
-      & code {
-        font-size: 1.3em;
-        color: var(--neutral-color-40);
-      }
-    }
   }
 
   &__body {

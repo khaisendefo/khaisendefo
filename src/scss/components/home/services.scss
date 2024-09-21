@@ -36,131 +36,72 @@
     position: relative;
     z-index: var(--z-index-3);
     display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
   }
 
   &__card {
-    overflow: hidden;
-    transition: border var(--transition), transform var(--transition);
-     
-    &:hover {
-      border: 1px solid var(--neutral-color-40);
-      transform: scale(1.01);
-    }
-
-    &-line-decor {
-      position: absolute;
-      z-index: var(--z-index-1);
-      opacity: 0.3;
-
-      & img {
-        width: 410px;
-        height: 543px;
-      }
-    }
-
-    &-cube-decor {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      z-index: var(--z-index-3);
-      transform: translateY(-50%);
-      transition: transform var(--transition);
-
-      & svg {
-        width: 150px;
-        height: 150px;
-      }
-    }
-
-    &:hover &-cube-decor {
-      transform: rotate(-10deg) translateY(-50%) scale(1.1);
-    }
-    
-    &-eclips-decor {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: var(--z-index-1);
-      opacity: 0.5;
-    }
-
-    &-eclips-decor-two {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: var(--z-index-1);
-      opacity: 0.5;
-      transform: rotate(180deg);
-    }
-
-    &-content {
-      position: relative;
-      z-index: var(--z-index-2);
+    &-head {
+      border-bottom: 1px solid var(--neutral-color-30);
       padding: 20px;
+      text-align: center;
     }
 
-    &-top {
-      margin-bottom: 20px;
-    }
-
-    &-title {
-      margin-bottom: 15px;
-      color: var(--neutral-color-40);
+    &-name {
+      margin-bottom: 10px;
+      color: var(--neutral-color-40); 
     }
 
     &-description {
       color: var(--neutral-color-70);
     }
 
+    &-content {
+      padding: 20px;
+    }
+
+    &-prise {
+      display: none;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 1.8em;
+      text-align: center;
+      color: var(--neutral-color-40);
+    }
+
     &-list {
       @include flex-column;
       gap: 15px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border: 1px solid var(--neutral-color-30);
-      border-radius: 10px;
-      padding: 30px 20px;
+      padding: 15px;
       background-color: var(--neutral-color-10);
     }
 
     &-item {
       @include flex-align-center;
-      gap: 10px;
+      gap: 8px;
+      color: var(--neutral-color-70);
+       
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
 
       & path {
         fill: var(--neutral-color-40);
-      }
-
-      &-name {
-        color: var(--neutral-color-20);
-      }
-    }
-
-    &-prise {
-      margin-bottom: 25px;
-      font-weight: 400;
-      font-size: 1.7em;
-      color: var(--neutral-color-20);
-
-      &-sum {
-        font-size: 35px;
-        color: var(--neutral-color-40);
       }
     }
 
     &-btn {
       @include flex-align-center;
-      gap: 20px;
+      gap: 15px;
     }
 
-    &-button {
-      min-width: 200px;
-
-      &-transperent {
-        min-width: 200px;
-      }
+    &-button, &-link {
+      min-width: 170px;
+      text-align: center;
     }
   }
 }
