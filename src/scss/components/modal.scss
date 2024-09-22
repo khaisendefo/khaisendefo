@@ -4,7 +4,6 @@
   right: 0;
   z-index: 1000;
   display: none;
-  overflow: hidden;
 
   &.active {
     display: block;
@@ -16,12 +15,17 @@
   }
   
   &__overlay {
-    padding: 0 15px;
     background-color: var(--neutral-color-60);
   }
 
   &__inner {
     @include flex-all-center;
+    overflow-y: auto;
+
+    @include breakpoint-tablet {
+      max-width: 100%;
+      background-color: var(--neutral-color-50);
+    }
   }
 
   &__window {
@@ -34,8 +38,22 @@
     background-color: var(--neutral-color-50);
     transition: border var(--transition);
 
+    @include breakpoint-500 {
+      padding: 20px;
+    }
+
+    @include breakpoint-tablet {
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
+    }
+
     &:hover {
       border: 1px solid var(--neutral-color-40);
+
+      @include breakpoint-tablet {
+        border: none;
+      }
     }
   }
 
@@ -67,7 +85,17 @@
     margin-bottom: 20px;
   }
 
+  &__head-title {
+    @include breakpoint-900 {
+      margin-bottom: 10px !important;
+    }
+  }
+
   &__head {
+    @include breakpoint-tablet {
+      text-align: center;
+    }
+
     &-description {
       color: var(--neutral-color-70);
     }
@@ -82,15 +110,45 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
       margin-bottom: 20px;
+
+      @include breakpoint-600 {
+        @include flex-column;
+      }
     }
 
     &-textarea {
       margin-bottom: 20px;
+
+      @include breakpoint-450 {
+        height: 100px;
+      }
+    }
+
+    &-btn {
+      @include flex-all-center;
+
+      @include breakpoint-450 {
+        flex-direction: column;
+      }
+    }
+
+    &-button, &-reset {
+      @include breakpoint-500 {
+        min-width: 200px;
+      }
+
+      @include breakpoint-450 {
+        min-width: 100%;
+      }
+    }
+
+    &-privacy {
+      text-align: center;
     }
   }
 
   &__thanks {
-    display: none;
+    display: none !important;
     width: 700px;
     height: 500px;
     background-color: var(--neutral-color-40);

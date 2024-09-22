@@ -1,12 +1,18 @@
 .portfolio {
-  padding: 50px 0;
-
   &__head {
     margin-bottom: 30px;
+
+    @include breakpoint-900 {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
     margin-bottom: 20px;
+
+    @include breakpoint-900 {
+      margin-bottom: 10px;
+    }
   }
 
   &__description {
@@ -19,12 +25,22 @@
     gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
+    margin-bottom: 30px;
+
+    @include breakpoint-700 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, auto);
+    }
   }
 
   &__project {
     overflow: hidden;
     padding: 30px;
     transition: border var(--transition);
+
+    @include breakpoint-900 {
+      padding: 20px;
+    }
 
     &:hover {
       border: 1px solid var(--neutral-color-40);
@@ -54,6 +70,7 @@
     top: 0; 
     right: 0;
     z-index: var(--z-index-2);
+    display: none;
     justify-content: space-between;
     padding: 30px;
     width: 100%;
@@ -125,5 +142,11 @@
       min-width: 200px;
       text-align: center;
     }
+  }
+
+  &__more {
+    display: block;
+    max-width: 210px;
+    text-align: center;
   }
 }

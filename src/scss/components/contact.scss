@@ -1,8 +1,6 @@
 .contact {
-  padding: 50px 0;
-
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 30px
   }
 
   &__body {
@@ -10,6 +8,20 @@
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 150px);
+
+    @include breakpoint-1100 {
+      gap: 10px;
+    }
+
+    @include breakpoint-900 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 130px);
+    }
+
+    @include breakpoint-500 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 120px);
+    }
   }
 
   &__platform {
@@ -39,6 +51,11 @@
       & svg {
         width: 25px;
         height: 25px;
+
+        @include breakpoint-600 {
+          width: 20px;
+          height: 20px;
+        }
       }
 
       & path {
@@ -58,6 +75,10 @@
     &-name {
       font-weight: 400;
       color: var(--neutral-color-20);
+
+      @include breakpoint-600 {
+        font-size: 0.9em;
+      }
     }
   }
 }

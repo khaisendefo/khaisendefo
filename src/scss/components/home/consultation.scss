@@ -1,15 +1,14 @@
 .consultation {
   position: relative;
   z-index: var(--z-index-5);
-  padding: 50px 0;
 
   &__body {
     overflow: hidden;
     padding: 30px;
     transition: border var(--transition);
 
-    &:hover {
-      border: 1px solid var(--neutral-color-40);
+    @include breakpoint-900 {
+      padding: 20px;
     }
 
     &::before {
@@ -17,15 +16,19 @@
       position: absolute;
       top: 50%; 
       right: -70px;
+      z-index: 1;
       width: 250px;
       height: 250px;
       background: url('/assets/images/3D/cube.png') no-repeat;
       background-size: contain;
       opacity: 0.7;
       transform: translateY(-50%);
+
+      @include breakpoint-1300 {
+        display: none;
+      }
     }
   }
-
 
   &__title {
     margin-bottom: 20px;
@@ -42,6 +45,15 @@
     gap: 25px;
     grid-template-columns: repeat(3, 300px);
     margin-bottom: 30px;
+
+    @include breakpoint-1100 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-900 {
+      @include flex-column;
+      max-width: 400px;
+    }
 
     &-button {
       padding: 20.7px 0;

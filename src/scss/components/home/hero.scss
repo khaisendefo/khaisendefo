@@ -2,6 +2,14 @@
   position: relative;
   padding: 80px 0;
 
+  @include breakpoint-1200 {
+    padding: 50px 0;
+  }
+
+  @include breakpoint-900 {
+    padding: 30px 0;
+  }
+
   &__inner {
     margin: 0 auto;
     max-width: 1920px;
@@ -13,11 +21,21 @@
     left: -70%;
     z-index: var(--z-index-2);
 
+    @include breakpoint-900 {
+      left: -90%;
+      opacity: 0.5;
+    }
+
     &-two {
       position: absolute;
       top: 50px;
       right: -70%;
       z-index: var(--z-index-2);
+
+      @include breakpoint-900 {
+        right: -90%;
+        opacity: 0.5;
+      }
     }
   }
 
@@ -27,21 +45,30 @@
     z-index: var(--z-index-3);
     gap: 15px;
     margin-bottom: 80px;
+
+    @include breakpoint-900 {
+      margin-bottom: 40px;
+    }
   }
 
   &__information {
+    position: relative;
+    z-index: var(--z-index-2);
     max-width: 750px;
   }
 
   &__title {
-    margin-bottom: 100px;
-    height: 67px;
-    line-height: 1.4;
+    margin-bottom: 30px;
     text-transform: uppercase;
+    color: var(--neutral-color-20);
     transition: all var(--transition);
 
     & span {
       color: var(--neutral-color-40);
+    }
+
+    @include breakpoint-900 {
+      margin-bottom: 20px;
     }
   }
 
@@ -49,6 +76,10 @@
     margin-bottom: 50px;
     max-width: 650px;
     color: var(--neutral-color-70);
+
+    @include breakpoint-900 {
+      margin-bottom: 35px;
+    }
   }
 
   &__button {
@@ -57,6 +88,10 @@
     border-radius: 30px;
     padding: 7px;
     min-width: 270px;
+
+    @include breakpoint-900 {
+      min-width: 250px;
+    }
 
     & span {
       position: relative;
@@ -75,6 +110,11 @@
      background-color: var(--neutral-color-10);
      transition: background-color var(--transition);
 
+     @include breakpoint-900 {
+       width: 30px;
+       height: 30px;
+     }
+
       & svg {
         position: absolute;
         top: 50%;
@@ -82,6 +122,11 @@
         width: 17px;
         height: 17px;
         transform: translate(50%, -50%);
+
+        @include breakpoint-900 {
+          width: 14px;
+          height: 14px;
+        }
 
         & path {
           fill: var(--neutral-color-20);
@@ -103,6 +148,19 @@
     & svg {
       width: 450px;
       height: 380px;
+
+      @include breakpoint-1200 {
+        position: absolute;
+        top: 0; 
+        right: -100px;
+        width: 400px;
+        height: 330px;
+        opacity: 0.6;
+      }
+
+      @include breakpoint-900 {
+        display: none;
+      }
     }
   }
 
@@ -116,6 +174,20 @@
       gap: 30px;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(1, auto);
+
+      @include breakpoint-900 {
+        gap: 15px;
+      }
+
+      @include breakpoint-tablet {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+      }
+
+      @include breakpoint-500 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+      }
     }
 
     &-box {
@@ -127,6 +199,10 @@
       background-color: var(--neutral-color-10);
       transition: transform var(--transition);
 
+      @include breakpoint-900 {
+        padding: 20px;
+      }
+
       &:hover {
         transform: scale(1.01);
       }
@@ -136,6 +212,10 @@
       position: absolute;
       width: 200px;
       height: 130px;
+
+      @include breakpoint-500 {
+        opacity: 0.4;
+      }
 
       &--one {
         top: -30px;
@@ -152,12 +232,22 @@
       &--three {
         top: -30px;
         right: -30px;
+
+        @include breakpoint-500 {
+          left: -40px;
+          transform: rotate(-90deg);
+        }
       }
 
       &--four {
         bottom: -40px;
         left: -40px;
         transform: rotate(-180deg);
+
+        @include breakpoint-500 {
+          left: 60%;
+          transform: rotate(90deg);
+        }
       }
     }
 
@@ -171,6 +261,10 @@
       font-weight: 400; 
       font-size: 2.5em;
       color: var(--neutral-color-40);
+
+      @include breakpoint-900 {
+        font-size: 2em;
+      }
     }
 
     &-description {
@@ -190,6 +284,10 @@
     opacity: 0.6;
     transform: translateX(50%);
     transition: background-color var(--transition), opacity var(--transition);
+
+    @include breakpoint-900 {
+      display: none;
+    }
 
     & svg {
       width: 18px;

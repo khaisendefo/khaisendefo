@@ -15,6 +15,10 @@
     color: var(--neutral-color-40);
     background-color: transparent; 
   }
+
+  @include breakpoint-600 {
+     padding: 15px 0;
+  }
 }
 
 .button-transparent {
@@ -33,5 +37,9 @@
   &:hover {
     color: var(--neutral-color-10);
     background-color: var(--neutral-color-40);
+  }
+
+  @include breakpoint-600 {
+    padding: 15px 0;
   }
 }

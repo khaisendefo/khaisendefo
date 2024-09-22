@@ -1,13 +1,19 @@
 .questions {
-  padding: 50px 0;
-
   &__head {
     margin-bottom: 30px;
+
+    @include breakpoint-900 {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
     @include flex-column;
     gap: 20px;
+
+    @include breakpoint-900 {
+      gap: 15px;
+    }
   }
 
   &__accordion {
@@ -15,6 +21,10 @@
     height: auto;
     transition: border var(--transition);
     cursor: pointer;
+
+    @include breakpoint-900 {
+      padding: 20px;
+    }
 
     &:hover {
       border: 1px solid var(--neutral-color-40);
@@ -30,6 +40,11 @@
 
     &-row {
       @include flex-all-between;
+      gap: 15px;
+
+      @include breakpoint-500 {
+        gap: 5px;
+      }
     }
 
     &-title {
@@ -44,6 +59,16 @@
       height: 40px;
       transition: transform var(--accordion-transtion), background-color var(--transition);
 
+      @include breakpoint-700 {
+        width: 30px;
+        height: 30px;
+      }
+
+      @include breakpoint-500 {
+         width: auto;
+         height: auto;
+      }
+
       svg {
         position: absolute;
         top: 50%;
@@ -51,6 +76,11 @@
         width: 16px;
         height: 16px;
         transform: translate(50%, -50%);
+
+        @include breakpoint-700 {
+          width: 14px;
+          height: 14px;
+        }
       }
 
       & path {
@@ -64,6 +94,10 @@
 
         & path {
           fill: var(--neutral-color-10);
+
+          @include breakpoint-500 {
+            fill: var(--neutral-color-40);
+          }
         }
       }
     }

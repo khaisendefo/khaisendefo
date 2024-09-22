@@ -29,8 +29,6 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "gsap": "^3.12.5",
-    "inputmask": "^5.0.9",
-    "just-validate": "^4.3.0",
-    "typed.js": "^2.1.0"
+    "inputmask": "^5.0.9"
   }
 }

@@ -3,10 +3,19 @@ import Splide from '@splidejs/splide';
 
 export const reviewsSlider = () => {
   const splide = new Splide('.splide', {
-    perPage: 3,
+    perPage: 3, 
     perMove: 1,
     pagination: false,
     arrows: false,
+
+    breakpoints: {
+      1100: {
+        perPage: 2, 
+      },
+      900: {
+        perPage: 1,
+      }
+    },
   });
 
   splide.mount();
@@ -20,6 +29,7 @@ export const reviewsSlider = () => {
   updateArrowState();
 
   splide.on('move', updateArrowState);
+  splide.on('updated', updateArrowState); 
 
   function updateArrowState() {
     if (splide.index === 0) {
@@ -28,7 +38,9 @@ export const reviewsSlider = () => {
       prevButton.classList.remove('reviews__slider-arrow--is-disabled');
     }
 
-    if (splide.index === splide.length - splide.options.perPage) {
+    const lastSlideIndex = splide.Components.Controller.getEnd();
+
+    if (splide.index === lastSlideIndex) {
       nextButton.classList.add('reviews__slider-arrow--is-disabled');
     } else {
       nextButton.classList.remove('reviews__slider-arrow--is-disabled');

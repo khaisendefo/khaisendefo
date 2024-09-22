@@ -1,13 +1,14 @@
 .step-work {
-  padding: 50px 0;
-
   &__title {
     margin-bottom: 30px;
+
+    @include breakpoint-900 {
+      margin-bottom: 20px;
+    }
   }
 
   &__body {
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
   }
 
   &__list {
@@ -15,11 +16,23 @@
     gap: 35px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
+
+    @include breakpoint-900 {
+      @include flex-column;
+    }
   }
 
   &__row {
     @include flex-align-center;
     gap: 20px;
+
+    @include breakpoint-700 {
+      align-items: start;
+    }
+
+    @include breakpoint-600 {
+      gap: 15px;
+    }
   }
 
   &__number {
@@ -31,6 +44,18 @@
     font-size: 1.5em;
     color: var(--neutral-color-10);
     background-color: var(--neutral-color-40);
+
+    @include breakpoint-700 {
+      min-width: 60px;
+      min-height: 60px;
+      font-size: 1.3em;
+    }
+
+    @include breakpoint-600 {
+      min-width: 50px;
+      min-height: 50px;
+      font-size: 1.1em;
+    }
   }
 
   &__label {

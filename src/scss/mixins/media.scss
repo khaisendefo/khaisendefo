@@ -79,6 +79,12 @@
   }
 }
 
+@mixin breakpoint-450 {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+
 @mixin breakpoint-400 {
   @media (max-width: 400px) {
     @content;

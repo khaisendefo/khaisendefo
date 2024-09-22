@@ -2,20 +2,94 @@
   border-top: 1px solid var(--neutral-color-30);
   padding: 35px 0 0;
 
+  @include breakpoint-700 {
+    padding: 15px 0;
+  }
+
+  @include breakpoint-450 {
+    padding: 0;
+  }
+
   &__label {
     margin-bottom: 15px;
     color: var(--neutral-color-40);
+
+    @include breakpoint-700 {
+      margin: 0;
+    }
   }
 
   &__row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    @include flex-between;
+    padding-bottom: 30px;
+
+    @include breakpoint-900 {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @include breakpoint-700 {
+      gap: 0;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  &__column {
+    @include breakpoint-700 {
+      border-bottom: 1px solid var(--neutral-color-30);
+    }
+  }
+
+  &__accordion {
+    @include breakpoint-700 {
+      @include flex-all-between;
+      padding: 15px 0;
+      cursor: pointer;
+    }
+  }
+
+  &__arrow {
+    display: none;
+    transition: transform var(--accordion-transtion);
+
+    & svg {
+      width: 14px;
+      height: 14px;
+      white-space: nowrap;
+    }
+
+    & path {
+      fill: var(--neutral-color-20);
+    }
+
+    &.active {
+      transform: rotate(90deg);
+    }
+
+    &.active path {
+       fill: var(--neutral-color-40);
+    }
+
+    @include breakpoint-700 {
+      display: block;
+    }
   }
 
   &__list {
     @include flex-column;
     gap: 10px;
+
+    @include breakpoint-700 {
+      overflow: hidden;
+      padding-top: 0;
+      max-height: 0;
+      transition: max-height var(--accordion-transtion), margin-bottom var(--accordion-transtion);
+
+      &.active {
+        margin-bottom: 15px;
+      }
+    }
   }
 
   &__link {
@@ -26,6 +100,16 @@
     @include flex-all-between;
     border-top: 1px solid var(--neutral-color-30);
     padding: 25px 0;
+
+    @include breakpoint-700 {
+      border-top: initial;
+    }
+
+    @include breakpoint-600 {
+      gap: 10px;
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &__copyright {
