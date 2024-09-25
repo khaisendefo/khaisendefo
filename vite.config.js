@@ -16,6 +16,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: './src/index.html',
+        portfolio: './src/portfolio.html',
+        services: './src/services.html',
       },
     },
   },
@@ -28,6 +30,9 @@ export default defineConfig({
       },
       jpg: {
         quality: 80,
+      },
+      svg: {
+        multipass: true,
       },
     }),
   ],

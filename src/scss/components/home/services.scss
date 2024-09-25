@@ -9,11 +9,19 @@
     left: -70%;
     z-index: var(--z-index-2);
 
+    @include breakpoint-900 {
+      display: none;
+    }
+
     &-two {
       position: absolute;
       right: -70%;
       bottom: -400px;
       z-index: var(--z-index-2);
+
+      @include breakpoint-900 {
+        display: none;
+      }
     }
   }
 

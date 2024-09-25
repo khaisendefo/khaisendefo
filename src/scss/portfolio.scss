@@ -1,0 +1,31 @@
+@import './mixins';
+@import './base';
+@import './global/';
+@import './components/header';
+@import './components/sidebar-menu';
+@import './components/footer';
+
+.load {
+  padding: 190px 0;
+  text-align: center;
+  
+  &-title {
+     margin-bottom: 20px;
+  }
+
+  &-link {
+    display: block; 
+    margin: 0 auto;
+    max-width: 290px;
+    text-align: center;
+
+    @include breakpoint-700 {
+      padding: 15px 0;
+      max-width: 250px;
+    }
+
+    @include breakpoint-500 {
+      max-width: 210px;
+    }
+  }
+}

@@ -1,18 +1,12 @@
-
-
 // import style
 import '/scss/main.scss';
 
 // import home component
-// import { gsapAnimation } from "./components/home/gsap-animation.js";
 import { reviewsSlider } from './components/home/splide.js';
-// import { reviewsModal } from './components/home/reviews-modal.js';
 import { toggleAccordion } from './components/home/accordion.js';
 
 // connect home home component
-// gsapAnimation();
 reviewsSlider();
-// reviewsModal();
 toggleAccordion();
 
 // import base component
@@ -29,10 +23,6 @@ modal();
 mainForm ();
 customSelect();
 accordionFooter();
-
-// import custmo component
-
-// connect custmo component
 
 
 

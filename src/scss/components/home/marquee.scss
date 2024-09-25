@@ -1,6 +1,9 @@
 .marquee {
   position: relative;
   z-index: var(--z-index-3);
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
 
   &__box {
     border-radius: 10px;
