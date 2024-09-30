@@ -47,14 +47,6 @@
       border-radius: 0;
       background-color: transparent;
     }
-
-    &:hover {
-      border: 1px solid var(--neutral-color-40);
-
-      @include breakpoint-tablet {
-        border: none;
-      }
-    }
   }
 
   &__close {

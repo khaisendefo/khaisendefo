@@ -103,15 +103,6 @@
     &-card {
       cursor: pointer;
 
-      &:hover {
-        border: 1px solid var(--neutral-color-40);
-        transform: scale(0.95);
-
-        @include breakpoint-tablet {
-          transform: scale(1)
-        }
-      }
-
       &--last {
         @include flex-all-center;
       }

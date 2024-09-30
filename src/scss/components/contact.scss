@@ -30,18 +30,15 @@
     overflow: hidden;
     border: 1px solid var(--neutral-color-30);
     border-radius: 10px;
-    padding: 20px;
     background-color: var(--neutral-color-50);
     transition: border var(--transition), transform var(--transition);
 
-    &:hover {
-      border: 1px solid var(--neutral-color-40);
-      transform: scale(0.95);
-    }
-
     &-link {
       @include flex-column;
+      position: relative;
+      z-index: var(--z-index-2);
       justify-content: space-between;
+      padding: 20px;
       height: 100%;
     }
 

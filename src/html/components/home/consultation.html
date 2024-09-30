@@ -2,9 +2,10 @@
   <div class="consultation__inner">
     <div class="consultation__container container">
       <div class="consultation__body card">
-        <h2 class="consultation__title heading-title title-animation">Оставте заявку на консультацию</h2>
-        <p class="consultation__description text-description">Заполните форму, и я свяжусь с вами, чтобы обсудить детали вашего проекта и предложить оптимальные решения. Консультация абсолютно бесплатна и ни к чему не обязывает.</p>
-        <form class="consultation__form form" action="">
+        <h2 class="consultation__title heading-title title-animation" data-aos="fade-right">Оставте заявку на консультацию</h2>
+        <p class="consultation__description text-description" data-aos="fade-left">Заполните форму, и я свяжусь с вами, чтобы обсудить детали вашего проекта и предложить оптимальные решения. Консультация абсолютно бесплатна и ни к чему не обязывает.</p>
+        <form class="consultation__form form" action="https://api.web3forms.com/submit" method="POST" data-aos="fade-up">
+          <input type="hidden" name="access_key" value="cf855937-7877-408c-a5b8-a24ee231cb86">
           <label class="consultation__form-label form-label" for="name">
             <input class="consultation__form-input form-input" required id="name" placeholder="Ваше имя" name="Имя" type="text">
           </label>
@@ -13,7 +14,7 @@
           </label>      
           <button type="submit" class="consultation__form-button green-button">Отправить</button>
         </form>
-        <p class="consultation__privacy text-small">
+        <p class="consultation__privacy text-small" data-aos="fade-up">
           Нажимая кнопку «Отправить» вы подтверждаете согласие на обработку персональных данных в соответствии с условиями <a href="#">Политики обработки данных</a>
         </p>
       </div>

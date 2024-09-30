@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
+    "aos": "^2.3.4",
     "inputmask": "^5.0.9"
   }
 }
