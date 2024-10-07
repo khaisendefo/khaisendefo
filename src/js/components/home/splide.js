@@ -14,6 +14,7 @@ export const reviewsSlider = () => {
       },
       900: {
         perPage: 1,
+        gap: '15px',
       }
     },
   });
